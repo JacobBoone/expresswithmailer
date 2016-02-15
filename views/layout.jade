@@ -1,0 +1,44 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset="utf-8")
+		title Mail Test
+
+		link(href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", rel="stylesheet")
+		link(href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.7.0/bootstrap-lightbox.min.css")
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.16/webfontloader.js")
+		link(rel='stylesheet' href='/stylesheets/main.css')
+
+	body
+		block content
+		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js")
+		script(src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.7.0/bootstrap-lightbox.min.js")
+		script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Flowtype.js/1.1.0/flowtype.min.js")
+		script(type="text/javascript", src="/javascripts/main.js")
+
+
+		nav.navbar.navbar-inverse.navbar-fixed-top
+			.container
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='#') NodeMailer Example
+				#navbar.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li.active
+							a(href='#') Home
+						li
+							a(href='#about') About
+						li
+							a(href='/contact') Contact
+		// /.nav-collapse
+		.container
+		.starter-template
+			
+
+		
