@@ -8,7 +8,7 @@ block content
 		.row
 			.col-md-5
 				h2 Contact
-				form(action='/contact', name='contact', id='contact', method='post')
+				form(action='contact/send', name='contact', id='contact', method='post')
 					div.form-group
 						label(for='name') Name:
 						input.form-control(name='name', type='text', placeholder='Name', id='name' required autofocus)
@@ -19,7 +19,7 @@ block content
 						label(for='message') Message:
 						textarea.form-control(name='message', placeholder='Message' id='message')
 					div.form-group
-						input.btn.btn-primary.btn-sm(name='submit', type='submit', value='Send', id='submit')
+						input.btn.btn-primary.btn-sm(name='submit', type='submit', value='Submit', id='submit')
 
 					if(typeof msg !== 'undefined')
 						if(!!err)
