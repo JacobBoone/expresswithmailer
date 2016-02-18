@@ -16,6 +16,22 @@ block content
 						label(for='email') Email:
 						input.form-control(name='email', type='email', placeholder='Email', id='email' required)
 					div.form-group
+						label(for='reason') Category:
+						select.form-control(name='reason', type='text', id='reason' required)
+							option(value='general') General Inquiry
+							option(value='birth') Birth/ Childbirth Classes
+							option(value='breastfeeding') Postpartum/ Breastfeeding Support
+							option(value='psychk') PSYCH-K
+							option(value='oils') Essential Oils
+					div.form-group
+						label(for='pack') Package of Interest:
+						select.form-control(name='pack', type='text', id='pack' required)
+							option(value='mommy') Mommy 
+							option(value='motherbaby') Mother Baby 
+							option(value='breastfeeding') Holistic Well Being
+							option(value='psychk') PSYCH-K
+							option(value='Other') Other
+					div.form-group
 						label(for='message') Message:
 						textarea.form-control(name='message', placeholder='Message' id='message')
 					div.form-group

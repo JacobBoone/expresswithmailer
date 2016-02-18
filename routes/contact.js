@@ -2,10 +2,11 @@ var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
 
-/* GET home page. */
+/* GET contact page. */
 router.get('/', function(req, res, next) {
   res.render('contact', { title: 'Contact' });
 });
+
 
 router.post('/send', function(req, res, next){
 	var transporter = nodemailer.createTransport({
@@ -16,19 +17,15 @@ router.post('/send', function(req, res, next){
 		}
 	})
 
-
-	
-
-
     var mailOptions = {
         from: '<onyxholisticservices@gmail.com>',
         to: 'onyxholisticservices@gmail.com',
         subject: 'Contact Form',
-        text: 'Name: ' + req.body.name + '\n' + 'Email: ' + req.body.email + '\n' + req.body.message
+        text: 'Name: ' + req.body.name + '\n' + 'Email: ' + req.body.email + '\n' + 'Reason for Contact: ' + req.body.reason + '\n' + 'Package of Interest: ' + req.body.pack + '\n' + req.body.message
     };
 
     transporter.sendMail(mailOptions, function(error, info){
-    	        if (error) {
+        if (error) {
             res.render('contact', {
                 title: 'Contact Error',
                 msg: 'Error occured, message not sent.',
@@ -43,14 +40,8 @@ router.post('/send', function(req, res, next){
                 page: 'contact'
             });
         }
-
     });
-
-
 });
-
-
-
 
 
 module.exports = router;
